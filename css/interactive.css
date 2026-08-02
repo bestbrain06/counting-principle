@@ -57,30 +57,19 @@
    ========================= */
 
 .video-container {
-
-  width:100%;
-
-  max-width:900px;
-
-  margin:2rem auto;
-
-  overflow:hidden;
-
-  border-radius:var(--border-radius);
-
-  box-shadow:var(--box-shadow);
-
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  position: relative;
 }
 
-
 .lesson-video {
-
-  width:100%;
-
-  height:auto;
-
-  display:block;
-
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border-radius: var(--border-radius);
+  object-fit: cover;
 }
 
 /* =========================
