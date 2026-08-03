@@ -1,0 +1,322 @@
+/* Interactive page specific styling */
+
+/* =========================
+   INTERACTIVE HERO
+   ========================= */
+
+.interactive-hero {
+  padding: 6rem 0;
+
+  background: linear-gradient(
+    135deg,
+    var(--surface-color),
+    var(--background-color)
+  );
+}
+
+.interactive-hero-content {
+  max-width: 850px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.interactive-label {
+  display: inline-block;
+
+  padding: 0.5rem 1.2rem;
+
+  border-radius: 50px;
+
+  background-color: rgba(0, 0, 0, 0.05);
+
+  color: var(--primary-color);
+
+  font-weight: 600;
+
+  margin-bottom: 1.5rem;
+}
+
+.interactive-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+
+  margin-bottom: 1rem;
+}
+
+.interactive-hero p {
+  max-width: 700px;
+
+  margin: auto;
+
+  font-size: 1.1rem;
+}
+
+/* =========================
+   VIDEO SECTION
+   ========================= */
+
+.video-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.lesson-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+}
+/* =========================
+   SIMULATOR SECTION
+   ========================= */
+
+.simulator-card {
+  background: var(--surface-color);
+
+  padding: 2.5rem;
+
+  border-radius: var(--border-radius);
+
+  border: 1px solid var(--border-color);
+
+  box-shadow: var(--box-shadow);
+}
+
+/* Input Area */
+
+.input-area {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 2rem;
+}
+
+.category-box {
+  background: white;
+
+  padding: 1.8rem;
+
+  border-radius: var(--border-radius);
+
+  border: 1px solid var(--border-color);
+}
+
+.category-box h3 {
+  color: var(--primary-color);
+
+  margin-bottom: 1rem;
+}
+
+.category-box input {
+  width: 100%;
+
+  padding: 0.9rem 1rem;
+
+  margin-bottom: 1rem;
+
+  border-radius: 8px;
+
+  border: 1px solid var(--border-color);
+
+  font-size: 1rem;
+
+  outline: none;
+
+  transition: var(--transition);
+}
+
+.category-box input:focus {
+  border-color: var(--primary-color);
+}
+
+/* Buttons */
+
+.simulator-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1rem;
+
+  margin: 2rem 0;
+}
+
+/* =========================
+   RESULTS AREA
+   ========================= */
+
+.results-area {
+  margin-top: 2rem;
+}
+
+.results-area h3 {
+  text-align: center;
+
+  margin-bottom: 1.5rem;
+}
+
+.outcome-list {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1rem;
+}
+
+.outcome-card {
+  padding: 1rem;
+
+  background: white;
+
+  border-radius: 10px;
+
+  border: 1px solid var(--border-color);
+
+  text-align: center;
+
+  transition: var(--transition);
+}
+
+.outcome-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: var(--box-shadow);
+}
+
+.calculation-box {
+  margin-top: 2rem;
+
+  padding: 1.5rem;
+
+  background: var(--secondary-color);
+
+  color: white;
+
+  border-radius: var(--border-radius);
+
+  text-align: center;
+
+  font-size: 1.2rem;
+
+  font-weight: 600;
+}
+
+/* =========================
+   REFLECTION SECTION
+   ========================= */
+
+.reflection-card {
+  background: var(--surface-color);
+
+  padding: 2.5rem;
+
+  border-radius: var(--border-radius);
+
+  border: 1px solid var(--border-color);
+
+  text-align: center;
+}
+
+.reflection-card h2 {
+  margin-bottom: 1rem;
+}
+
+.reflection-example {
+  margin-top: 1.5rem;
+
+  padding: 1.5rem;
+
+  background: white;
+
+  border-radius: 10px;
+
+  font-size: 1.3rem;
+
+  font-weight: 700;
+
+  color: var(--primary-color);
+}
+
+/* =========================
+   PAGE NAVIGATION
+   ========================= */
+
+.page-navigation .container {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+}
+
+/* =========================
+   ANIMATION
+   ========================= */
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+.outcome-card {
+  animation: slideUp 0.4s ease;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 900px) {
+  .input-area {
+    grid-template-columns: 1fr;
+  }
+
+  .outcome-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .video-container iframe {
+    height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .interactive-hero {
+    padding: 4rem 0;
+  }
+
+  .simulator-card {
+    padding: 1.5rem;
+  }
+
+  .simulator-buttons {
+    flex-direction: column;
+  }
+
+  .outcome-list {
+    grid-template-columns: 1fr;
+  }
+
+  .video-container iframe {
+    height: 250px;
+  }
+
+  .page-navigation .container {
+    flex-direction: column;
+  }
+}
