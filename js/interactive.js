@@ -1,26 +1,23 @@
 // Fundamental Counting Principle Interactive Simulator
 
 const generateBtn = document.getElementById("generateBtn");
-
 const resetBtn = document.getElementById("resetBtn");
 
 const categoryOneName = document.getElementById("categoryOneName");
-
 const categoryOneItems = document.getElementById("categoryOneItems");
 
 const categoryTwoName = document.getElementById("categoryTwoName");
-
 const categoryTwoItems = document.getElementById("categoryTwoItems");
 
 const outcomeList = document.getElementById("outcomeList");
-
 const calculationBox = document.getElementById("calculationBox");
 
-// Generate combinations
+// Reflection elements
+const discoveryText = document.getElementById("discoveryText");
+const discoveryExample = document.getElementById("discoveryExample");
 
 generateBtn.addEventListener("click", () => {
   const firstName = categoryOneName.value.trim();
-
   const secondName = categoryTwoName.value.trim();
 
   const firstItems = categoryOneItems.value
@@ -34,26 +31,26 @@ generateBtn.addEventListener("click", () => {
     .filter((item) => item !== "");
 
   // Validation
-
   if (
     firstName === "" ||
     secondName === "" ||
     firstItems.length === 0 ||
     secondItems.length === 0
   ) {
-    outcomeList.innerHTML = `
-      <p>
-      Please enter both categories and their items.
-      </p>
-    `;
+    outcomeList.innerHTML =
+      "<p>Please enter both categories and their items.</p>";
 
     calculationBox.innerHTML = "";
+
+    discoveryText.textContent =
+      "Complete both categories before generating outcomes.";
+
+    discoveryExample.textContent = "Waiting for your calculation...";
 
     return;
   }
 
-  // Generate outcomes
-
+  // Generate combinations
   const outcomes = [];
 
   firstItems.forEach((firstItem) => {
@@ -63,53 +60,52 @@ generateBtn.addEventListener("click", () => {
   });
 
   // Display outcomes
-
   outcomeList.innerHTML = "";
 
   outcomes.forEach((outcome) => {
     const card = document.createElement("div");
-
-    card.classList.add("outcome-card");
-
+    card.className = "outcome-card";
     card.textContent = outcome;
-
     outcomeList.appendChild(card);
   });
 
-  // Display mathematical explanation
-
+  // Calculation box
   calculationBox.innerHTML = `
+    <strong>Fundamental Counting Principle</strong><br><br>
 
-    Number of ${firstName} choices × 
-    Number of ${secondName} choices
+    Number of ${firstName} choices × Number of ${secondName} choices
 
     <br><br>
 
-    ${firstItems.length} × ${secondItems.length}
+    <strong>${firstItems.length} × ${secondItems.length} = ${outcomes.length}</strong>
+  `;
 
-    = ${outcomes.length} possible outcomes
+  // Dynamic discovery section
+  discoveryText.textContent = `You discovered that ${firstItems.length} ${firstName} choices combined with ${secondItems.length} ${secondName} choices produce ${outcomes.length} different outcomes.`;
 
+  discoveryExample.innerHTML = `
+    ${firstItems.length} × ${secondItems.length} = <strong>${outcomes.length}</strong>
+
+    <br><br>
+
+    Therefore, there are <strong>${outcomes.length}</strong> possible outcomes.
   `;
 });
 
-// Reset simulator
-
+// Reset
 resetBtn.addEventListener("click", () => {
   categoryOneName.value = "";
-
   categoryOneItems.value = "";
-
   categoryTwoName.value = "";
-
   categoryTwoItems.value = "";
 
-  outcomeList.innerHTML = `
-
-    <p>
-    Your generated combinations will appear here.
-    </p>
-
-  `;
+  outcomeList.innerHTML =
+    "<p>Your generated combinations will appear here.</p>";
 
   calculationBox.innerHTML = "";
+
+  discoveryText.textContent =
+    "Try creating your own counting problem above and click Generate Outcomes.";
+
+  discoveryExample.textContent = "Your calculation will appear here.";
 });
