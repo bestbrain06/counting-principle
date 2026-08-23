@@ -1,0 +1,254 @@
+/* ==========================================
+   ABOUT PAGE
+   Fundamental Counting Principle Project
+========================================== */
+
+/* HERO */
+
+.about-hero {
+  background: linear-gradient(135deg, #eef4ff 0%, #ffffff 100%);
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--accent-color);
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-size: var(--text-small);
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.about-hero h1 {
+  font-size: var(--heading-xl);
+  margin-bottom: 1rem;
+}
+
+.about-hero p {
+  margin-bottom: 2rem;
+  max-width: 560px;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.hero-tags span {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  font-size: var(--text-small);
+  font-weight: 500;
+}
+
+/* Decorative maths */
+
+.hero-art {
+  position: relative;
+  height: 340px;
+}
+
+.pattern {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background-image:
+    linear-gradient(var(--border-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.math-box {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.box-one {
+  width: 140px;
+  height: 140px;
+  background: var(--primary-color);
+  top: 30px;
+  left: 35px;
+  font-size: 2rem;
+}
+
+.box-two {
+  width: 90px;
+  height: 90px;
+  background: var(--accent-color);
+  bottom: 35px;
+  right: 40px;
+  font-size: 1.8rem;
+}
+
+/* PROJECT STORY */
+
+.story {
+  background: var(--surface-color);
+}
+
+.story-content {
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+}
+
+.story-content p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+/* INFORMATION STRIP */
+
+.info-strip {
+  background: #eefbf6;
+  border-top: 1px solid rgba(16, 185, 129, 0.12);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.12);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.info-item {
+  padding: 1rem 0;
+}
+
+.info-item h4 {
+  color: var(--accent-color);
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-item p {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* TEAM */
+
+.team {
+  background: var(--background-color);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.member {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.member:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--box-shadow);
+  border-color: var(--accent-color);
+}
+
+.initial {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.3rem;
+}
+
+.member h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.member .role {
+  color: var(--muted-text-color);
+  font-size: var(--text-small);
+  margin-bottom: 0.7rem;
+}
+
+.member .index {
+  color: var(--accent-color);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* EDUCATIONAL GOAL */
+
+.goal {
+  background: var(--surface-color);
+}
+
+.goal-box {
+  background: linear-gradient(135deg, var(--primary-color), #2746a3);
+  color: white;
+  border-radius: 24px;
+  padding: 3rem;
+  text-align: center;
+}
+
+.goal-box h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.goal-box p {
+  color: #dbeafe;
+  max-width: 720px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    order: -1;
+    height: 250px;
+  }
+
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .goal-box {
+    padding: 2rem;
+  }
+}
