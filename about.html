@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>About | Counting Techniques</title>
@@ -12,26 +13,24 @@
       rel="stylesheet"
     />
 
-    <!-- Website Styles -->
+    <!-- Styles -->
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/about.css" />
   </head>
 
   <body>
-    <!-- ==========================================
-         HEADER / NAVIGATION
-    =========================================== -->
+    <!-- =========================================
+         HEADER
+    ========================================== -->
 
     <header class="header">
       <div class="container navbar">
-        <!-- Logo -->
-        <div class="logo">
+        <a href="index.html" class="logo">
           <h2>MathLearn</h2>
           <span>Mathematics Learning Platform</span>
-        </div>
+        </a>
 
-        <!-- Mobile Menu Button -->
         <button
           class="menu-toggle"
           id="menuToggle"
@@ -43,7 +42,6 @@
           <span></span>
         </button>
 
-        <!-- Navigation -->
         <nav class="nav-menu" id="navMenu">
           <ul class="nav-links">
             <li>
@@ -67,7 +65,7 @@
             </li>
 
             <li>
-              <a href="about.html" class="active">About</a>
+              <a href="about.html" class="active"> About </a>
             </li>
           </ul>
         </nav>
@@ -75,208 +73,329 @@
     </header>
 
     <main>
-      <!-- ==========================================
-           HERO SECTION
-      =========================================== -->
+      <!-- =========================================
+           HERO
+      ========================================== -->
 
-      <section class="about-hero">
-        <div class="container hero-grid">
-          <!-- Hero Text -->
+      <section class="counting-hero">
+        <div class="container counting-hero-grid">
           <div class="hero-content">
-            <span class="hero-badge"> Educational Mathematics Website </span>
+            <span class="hero-kicker"> ABOUT THE PROJECT </span>
 
-            <h1>Fundamental Counting Principle</h1>
+            <h1>
+              Understanding
+              <span>Counting</span>
+              Through Mathematics.
+            </h1>
 
             <p>
-              A web-based learning platform designed to help Senior High School
-              students understand counting techniques through interactive
-              lessons, guided practice, and engaging mathematical activities.
+              Counting Techniques is an educational website created to help
+              Senior High School students understand the Fundamental Counting
+              Principle through clear explanations, examples, practice, and
+              interactive mathematical activities.
             </p>
 
-            <!-- Hero Tags -->
-            <div class="hero-tags">
-              <span>SHS Mathematics</span>
-              <span>Counting Techniques</span>
-              <span>Interactive Learning</span>
+            <div class="hero-actions">
+              <a href="lesson.html" class="btn btn-primary">
+                Explore the Lesson
+              </a>
+
+              <a href="interactive.html" class="btn btn-secondary">
+                Try Interactive
+              </a>
             </div>
           </div>
 
-          <!-- Decorative Mathematics -->
-          <div class="hero-art">
-            <div class="pattern"></div>
+          <!-- Mathematical visual -->
 
-            <div class="math-box box-one">n!</div>
+          <div class="math-display">
+            <div class="math-circle circle-one">1</div>
 
-            <div class="math-box box-two">×</div>
+            <div class="math-circle circle-two">2</div>
+
+            <div class="math-circle circle-three">3</div>
+
+            <div class="math-equation">
+              <span>3</span>
+              <strong>×</strong>
+              <span>4</span>
+              <strong>=</strong>
+              <span class="answer">12</span>
+            </div>
+
+            <div class="math-label">POSSIBILITIES</div>
           </div>
         </div>
       </section>
 
-      <!-- ==========================================
-           PROJECT STORY
-      =========================================== -->
+      <!-- =========================================
+           PROJECT INTRODUCTION
+      ========================================== -->
 
-      <section class="story">
-        <div class="container">
+      <section class="project-story">
+        <div class="container story-grid">
+          <div class="story-heading">
+            <span class="section-label"> 01 — THE PROJECT </span>
+
+            <h2>Making counting easier to understand.</h2>
+          </div>
+
           <div class="story-content">
-            <div class="section-title">
-              <h2>Why This Project Matters</h2>
-            </div>
+            <p>
+              The Fundamental Counting Principle is an important concept in
+              mathematics because it provides a systematic way of determining
+              the number of possible outcomes when several choices are involved.
+            </p>
 
             <p>
-              The Fundamental Counting Principle forms the foundation for
-              permutations, combinations, and probability. This educational
-              website was created to make these concepts easier to understand
-              through visual explanations, practical examples, and interactive
-              learning experiences for Senior High School students.
+              However, students may find abstract counting problems difficult
+              when they are presented only through formulas. This project
+              therefore uses a web-based learning environment to connect
+              mathematical ideas with practical examples and interactive
+              activities.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- ==========================================
-           PROJECT INFORMATION
-      =========================================== -->
+      <!-- =========================================
+           ACADEMIC INFORMATION
+      ========================================== -->
 
-      <section class="info-strip">
-        <div class="container info-grid">
-          <div class="info-item">
-            <h4>Institution</h4>
-            <p>University of Education, Winneba</p>
+      <section class="academic-section">
+        <div class="container">
+          <div class="academic-heading">
+            <span class="section-label"> 02 — PROJECT DETAILS </span>
+
+            <h2>Academic Information</h2>
           </div>
 
-          <div class="info-item">
-            <h4>Department</h4>
-            <p>Mathematics Education</p>
-          </div>
+          <div class="academic-grid">
+            <article class="academic-card">
+              <span class="card-number"> 01 </span>
 
-          <div class="info-item">
-            <h4>Course</h4>
-            <p>Web Technologies for Mathematics Teacher</p>
-          </div>
+              <span class="card-label"> Institution </span>
 
-          <div class="info-item">
-            <h4>Topic</h4>
-            <p>Fundamental Counting Principle</p>
+              <h3>University of Education, Winneba</h3>
+            </article>
+
+            <article class="academic-card">
+              <span class="card-number"> 02 </span>
+
+              <span class="card-label"> Department </span>
+
+              <h3>Mathematics Education</h3>
+            </article>
+
+            <article class="academic-card">
+              <span class="card-number"> 03 </span>
+
+              <span class="card-label"> Course </span>
+
+              <h3>Web Technologies for Mathematics Teacher</h3>
+            </article>
+
+            <article class="academic-card">
+              <span class="card-number"> 04 </span>
+
+              <span class="card-label"> Learning Topic </span>
+
+              <h3>Fundamental Counting Principle</h3>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- ==========================================
-           DEVELOPMENT TEAM
-      =========================================== -->
+      <!-- =========================================
+           LEARNING APPROACH
+      ========================================== -->
 
-      <section class="team">
+      <section class="approach-section">
         <div class="container">
-          <div class="section-title">
+          <div class="approach-heading">
+            <span class="section-label"> 03 — LEARNING APPROACH </span>
+
+            <h2>Learn. Practise. Apply.</h2>
+
+            <p>
+              The website brings different learning activities together to help
+              students move from understanding the concept to applying it
+              independently.
+            </p>
+          </div>
+
+          <div class="approach-grid">
+            <article class="approach-item">
+              <div class="approach-icon">01</div>
+
+              <h3>Learn</h3>
+
+              <p>
+                Study the Fundamental Counting Principle through structured
+                explanations and worked examples.
+              </p>
+            </article>
+
+            <article class="approach-item featured">
+              <div class="approach-icon">02</div>
+
+              <h3>Explore</h3>
+
+              <p>
+                Use interactive activities to experiment with counting
+                situations and discover possible outcomes.
+              </p>
+            </article>
+
+            <article class="approach-item">
+              <div class="approach-icon">03</div>
+
+              <h3>Practise</h3>
+
+              <p>
+                Solve carefully selected questions and receive feedback that
+                supports continued learning.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           DEVELOPMENT TEAM
+      ========================================== -->
+
+      <section class="team-section">
+        <div class="container">
+          <div class="team-heading">
+            <span class="section-label"> 04 — OUR TEAM </span>
+
             <h2>Development Team</h2>
 
-            <p class="section-description">
-              This website was designed and developed as a collaborative
+            <p>
+              This educational website was developed collaboratively as an
               academic project by the following students.
             </p>
           </div>
 
-          <div class="team-grid">
-            <!-- Member 1 -->
-            <article class="member">
-              <div class="initial">EQ</div>
+          <div class="team-list">
+            <article class="team-member">
+              <span class="member-number"> 01 </span>
 
-              <h3>Emmanuel Quaicoe</h3>
+              <div class="member-initial">EQ</div>
 
-              <p class="role">Group Member</p>
+              <div class="member-info">
+                <h3>Emmanuel Quaicoe</h3>
 
-              <p class="index">Index No. 5240110139</p>
+                <p>Group Member</p>
+              </div>
+
+              <span class="member-index"> 5240110139 </span>
             </article>
 
-            <!-- Member 2 -->
-            <article class="member">
-              <div class="initial">NK</div>
+            <article class="team-member">
+              <span class="member-number"> 02 </span>
 
-              <h3>Nana Kwartend Akosa</h3>
+              <div class="member-initial">NK</div>
 
-              <p class="role">Group Member</p>
+              <div class="member-info">
+                <h3>Nana Kwartend Akosa</h3>
 
-              <p class="index">Index No. 5240110190</p>
+                <p>Group Member</p>
+              </div>
+
+              <span class="member-index"> 5240110190 </span>
             </article>
 
-            <!-- Member 3 -->
-            <article class="member">
-              <div class="initial">TW</div>
+            <article class="team-member">
+              <span class="member-number"> 03 </span>
 
-              <h3>Tsey Oliver Worlanyo</h3>
+              <div class="member-initial">TW</div>
 
-              <p class="role">Group Member</p>
+              <div class="member-info">
+                <h3>Tsey Oliver Worlanyo</h3>
 
-              <p class="index">Index No. 5240110048</p>
+                <p>Group Member</p>
+              </div>
+
+              <span class="member-index"> 5240110048 </span>
             </article>
 
-            <!-- Member 4 -->
-            <article class="member">
-              <div class="initial">IB</div>
+            <article class="team-member">
+              <span class="member-number"> 04 </span>
 
-              <h3>Isaac Bismark Bondze</h3>
+              <div class="member-initial">IB</div>
 
-              <p class="role">Group Member</p>
+              <div class="member-info">
+                <h3>Isaac Bismark Bondze</h3>
 
-              <p class="index">Index No. 5240110046</p>
+                <p>Group Member</p>
+              </div>
+
+              <span class="member-index"> 5240110046 </span>
             </article>
 
-            <!-- Member 5 -->
-            <article class="member">
-              <div class="initial">JG</div>
+            <article class="team-member">
+              <span class="member-number"> 05 </span>
 
-              <h3>Joyceline Glago Dzifa</h3>
+              <div class="member-initial">JG</div>
 
-              <p class="role">Group Member</p>
+              <div class="member-info">
+                <h3>Joyceline Glago Dzifa</h3>
 
-              <p class="index">Index No. 5240110074</p>
+                <p>Group Member</p>
+              </div>
+
+              <span class="member-index"> 5240110074 </span>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- ==========================================
+      <!-- =========================================
            EDUCATIONAL GOAL
-      =========================================== -->
+      ========================================== -->
 
-      <section class="goal">
+      <section class="goal-section">
         <div class="container">
-          <div class="goal-box">
-            <h2>Our Educational Goal</h2>
+          <div class="goal-content">
+            <div class="goal-formula">n₁ × n₂ × n₃</div>
 
-            <p>
-              To provide an engaging digital environment where students can
-              confidently learn, practice, and apply the Fundamental Counting
-              Principle while developing logical reasoning and problem-solving
-              skills.
-            </p>
+            <div class="goal-text">
+              <span class="section-label"> 05 — OUR GOAL </span>
+
+              <h2>Making mathematical thinking more accessible.</h2>
+
+              <p>
+                Our goal is to create an engaging digital environment where
+                students can understand, practise, and apply the Fundamental
+                Counting Principle while developing logical reasoning and
+                mathematical problem-solving skills.
+              </p>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ==========================================
+    <!-- =========================================
          FOOTER
-    =========================================== -->
+    ========================================== -->
 
     <footer class="footer">
       <div class="container">
         <div class="footer-grid">
-          <!-- Brand -->
           <div class="footer-column">
-            <h3 class="footer-logo">Counting Techniques</h3>
+            <h3 class="footer-logo">MathLearn</h3>
 
             <p>
-              An educational website designed to help Senior High School
-              students understand the Fundamental Counting Principle through
-              interactive learning.
+              An educational mathematics platform designed to help students
+              understand counting techniques through interactive learning.
             </p>
           </div>
 
-          <!-- Pages -->
           <div class="footer-column">
-            <h4>Pages</h4>
+            <h4>Navigation</h4>
 
             <ul class="footer-links">
               <li>
@@ -298,25 +417,19 @@
               <li>
                 <a href="assessment.html">Assessment</a>
               </li>
-
-              <li>
-                <a href="about.html">About</a>
-              </li>
             </ul>
           </div>
 
-          <!-- Topic -->
           <div class="footer-column">
-            <h4>Learning Topic</h4>
+            <h4>Subject</h4>
 
             <p>Fundamental Counting Principle</p>
 
             <p>Counting Techniques</p>
           </div>
 
-          <!-- Institution -->
           <div class="footer-column">
-            <h4>Academic Information</h4>
+            <h4>Institution</h4>
 
             <p>University of Education, Winneba</p>
 
@@ -324,7 +437,6 @@
           </div>
         </div>
 
-        <!-- Footer Bottom -->
         <div class="footer-bottom">
           <p>© 2026 Group Educational Project</p>
 
@@ -333,7 +445,6 @@
       </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/script.js"></script>
   </body>
 </html>
