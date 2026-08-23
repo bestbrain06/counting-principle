@@ -1,254 +1,1208 @@
-/* ==========================================
-   ABOUT PAGE
-   Fundamental Counting Principle Project
-========================================== */
+/* =========================================================
+   COUNTING TECHNIQUES — ABOUT PAGE
+   Mathematical / Geometric / Academic Design
+========================================================= */
 
-/* HERO */
+/* =========================================================
+   HERO SECTION
+========================================================= */
 
-.about-hero {
-  background: linear-gradient(135deg, #eef4ff 0%, #ffffff 100%);
-  padding: 6rem 0;
+.counting-hero {
+  position: relative;
+
+  min-height: 680px;
+
+  display: flex;
+
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(16, 185, 129, 0.1),
+      transparent 25%
+    ),
+    linear-gradient(135deg, #f8fafc 0%, #ffffff 55%, #f0fdf4 100%);
+
   overflow: hidden;
 }
 
-.hero-grid {
+/* Decorative background lines */
+
+.counting-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+
+  height: 500px;
+
+  right: -180px;
+
+  top: -180px;
+
+  border: 1px solid rgba(30, 58, 138, 0.08);
+
+  border-radius: 50%;
+}
+
+.counting-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+
+  height: 350px;
+
+  right: -80px;
+
+  bottom: -180px;
+
+  border: 1px solid rgba(16, 185, 129, 0.12);
+
+  border-radius: 50%;
+}
+
+/* Hero layout */
+
+.counting-hero-grid {
   display: grid;
+
   grid-template-columns: 1.1fr 0.9fr;
+
   align-items: center;
-  gap: 4rem;
+
+  gap: 5rem;
+
+  position: relative;
+
+  z-index: 1;
 }
 
-.hero-badge {
-  display: inline-block;
-  background: rgba(16, 185, 129, 0.12);
+/* Hero content */
+
+.hero-content {
+  max-width: 680px;
+}
+
+.hero-kicker {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.6rem;
+
   color: var(--accent-color);
-  padding: 0.55rem 1rem;
-  border-radius: 999px;
-  font-size: var(--text-small);
-  font-weight: 600;
-  margin-bottom: 1.2rem;
+
+  font-size: 0.75rem;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 1.5rem;
 }
 
-.about-hero h1 {
-  font-size: var(--heading-xl);
+.hero-kicker::before {
+  content: "";
+
+  width: 28px;
+
+  height: 2px;
+
+  background: var(--accent-color);
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+
+  line-height: 1.02;
+
+  letter-spacing: -2px;
+
+  margin-bottom: 1.5rem;
+
+  color: var(--secondary-color);
+}
+
+.hero-content h1 span {
+  color: var(--primary-color);
+
+  position: relative;
+}
+
+/* Small underline beneath "Counting" */
+
+.hero-content h1 span::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -4px;
+
+  width: 100%;
+
+  height: 5px;
+
+  background: var(--accent-color);
+
+  opacity: 0.8;
+
+  border-radius: 5px;
+}
+
+.hero-content > p {
+  max-width: 620px;
+
+  font-size: 1.08rem;
+
+  line-height: 1.9;
+
+  margin-bottom: 2rem;
+}
+
+/* Hero buttons */
+
+.hero-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+}
+
+.hero-actions .btn {
+  border-radius: var(--border-radius-sm);
+}
+
+/* =========================================================
+   MATHEMATICAL HERO VISUAL
+========================================================= */
+
+.math-display {
+  position: relative;
+
+  width: 400px;
+
+  height: 400px;
+
+  margin-inline: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+/* Large circle */
+
+.math-display::before {
+  content: "";
+
+  position: absolute;
+
+  width: 310px;
+
+  height: 310px;
+
+  border: 2px dashed rgba(30, 58, 138, 0.18);
+
+  border-radius: 50%;
+}
+
+/* Inner circle */
+
+.math-display::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+
+  height: 220px;
+
+  border: 1px solid rgba(16, 185, 129, 0.35);
+
+  border-radius: 50%;
+}
+
+/* Number circles */
+
+.math-circle {
+  position: absolute;
+
+  width: 68px;
+
+  height: 68px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-family: var(--heading-font);
+
+  font-size: 1.5rem;
+
+  font-weight: 700;
+
+  background: white;
+
+  box-shadow: var(--box-shadow);
+
+  z-index: 3;
+}
+
+.circle-one {
+  top: 35px;
+
+  left: 70px;
+
+  color: var(--primary-color);
+
+  border: 3px solid var(--primary-color);
+}
+
+.circle-two {
+  top: 105px;
+
+  right: 20px;
+
+  color: var(--accent-color);
+
+  border: 3px solid var(--accent-color);
+}
+
+.circle-three {
+  bottom: 45px;
+
+  left: 95px;
+
+  color: var(--secondary-color);
+
+  border: 3px solid var(--secondary-color);
+}
+
+/* Equation */
+
+.math-equation {
+  position: relative;
+
+  z-index: 4;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.7rem;
+
+  padding: 1.3rem 1.6rem;
+
+  background: white;
+
+  border: 1px solid var(--border-color);
+
+  border-radius: var(--border-radius);
+
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+
+  font-family: var(--heading-font);
+
+  font-size: 2.1rem;
+
+  font-weight: 700;
+}
+
+.math-equation strong {
+  color: var(--accent-color);
+}
+
+.math-equation .answer {
+  color: var(--primary-color);
+}
+
+/* Label */
+
+.math-label {
+  position: absolute;
+
+  bottom: 10px;
+
+  right: 30px;
+
+  z-index: 5;
+
+  padding: 0.5rem 0.8rem;
+
+  background: var(--secondary-color);
+
+  color: white;
+
+  font-size: 0.65rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  border-radius: 4px;
+}
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.section-label {
+  display: inline-block;
+
+  color: var(--accent-color);
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
   margin-bottom: 1rem;
 }
 
-.about-hero p {
-  margin-bottom: 2rem;
-  max-width: 560px;
+/* =========================================================
+   PROJECT STORY
+========================================================= */
+
+.project-story {
+  background: white;
+
+  padding: 7rem 0;
 }
 
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
+.story-grid {
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 7rem;
+
+  align-items: start;
 }
 
-.hero-tags span {
-  background: var(--surface-color);
-  border: 1px solid var(--border-color);
-  padding: 0.6rem 1rem;
-  border-radius: 999px;
-  font-size: var(--text-small);
-  font-weight: 500;
-}
+.story-heading h2 {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
 
-/* Decorative maths */
+  line-height: 1.1;
 
-.hero-art {
-  position: relative;
-  height: 340px;
-}
+  color: var(--secondary-color);
 
-.pattern {
-  position: absolute;
-  inset: 0;
-  border-radius: 24px;
-  background-image:
-    linear-gradient(var(--border-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
-  background-size: 32px 32px;
-}
-
-.math-box {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  color: white;
-  border-radius: 20px;
-  box-shadow: var(--box-shadow);
-}
-
-.box-one {
-  width: 140px;
-  height: 140px;
-  background: var(--primary-color);
-  top: 30px;
-  left: 35px;
-  font-size: 2rem;
-}
-
-.box-two {
-  width: 90px;
-  height: 90px;
-  background: var(--accent-color);
-  bottom: 35px;
-  right: 40px;
-  font-size: 1.8rem;
-}
-
-/* PROJECT STORY */
-
-.story {
-  background: var(--surface-color);
+  max-width: 430px;
 }
 
 .story-content {
-  max-width: 760px;
-  margin: auto;
-  text-align: center;
+  max-width: 700px;
+
+  padding-top: 2.5rem;
 }
 
 .story-content p {
   font-size: 1.05rem;
+
   line-height: 1.9;
+
+  margin-bottom: 1.5rem;
 }
 
-/* INFORMATION STRIP */
+/* =========================================================
+   ACADEMIC INFORMATION
+========================================================= */
 
-.info-strip {
-  background: #eefbf6;
-  border-top: 1px solid rgba(16, 185, 129, 0.12);
-  border-bottom: 1px solid rgba(16, 185, 129, 0.12);
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-}
-
-.info-item {
-  padding: 1rem 0;
-}
-
-.info-item h4 {
-  color: var(--accent-color);
-  margin-bottom: 0.4rem;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.info-item p {
-  color: var(--text-color);
-  font-weight: 600;
-}
-
-/* TEAM */
-
-.team {
+.academic-section {
   background: var(--background-color);
+
+  padding: 6rem 0;
 }
 
-.team-grid {
+.academic-heading {
+  margin-bottom: 3rem;
+}
+
+.academic-heading h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  color: var(--secondary-color);
+}
+
+.academic-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid var(--border-color);
+
+  border-left: 1px solid var(--border-color);
+
+  background: white;
 }
 
-.member {
-  background: var(--surface-color);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
+.academic-card {
+  min-height: 250px;
+
   padding: 2rem;
+
+  border-right: 1px solid var(--border-color);
+
+  border-bottom: 1px solid var(--border-color);
+
+  position: relative;
+
   transition: var(--transition);
 }
 
-.member:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--box-shadow);
-  border-color: var(--accent-color);
+.academic-card:hover {
+  background: #f8fafc;
+
+  transform: translateY(-5px);
 }
 
-.initial {
-  width: 68px;
-  height: 68px;
-  border-radius: 18px;
-  background: var(--primary-color);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 1.3rem;
+.card-number {
+  display: block;
+
+  color: var(--accent-color);
+
+  font-size: 0.7rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 3rem;
 }
 
-.member h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
-}
+.card-label {
+  display: block;
 
-.member .role {
   color: var(--muted-text-color);
-  font-size: var(--text-small);
+
+  text-transform: uppercase;
+
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+
   margin-bottom: 0.7rem;
 }
 
-.member .index {
-  color: var(--accent-color);
-  font-weight: 700;
-  letter-spacing: 0.5px;
+.academic-card h3 {
+  font-size: 1.15rem;
+
+  line-height: 1.5;
+
+  color: var(--secondary-color);
 }
 
-/* EDUCATIONAL GOAL */
+/* =========================================================
+   LEARNING APPROACH
+========================================================= */
 
-.goal {
-  background: var(--surface-color);
+.approach-section {
+  background: white;
+
+  padding: 7rem 0;
 }
 
-.goal-box {
-  background: linear-gradient(135deg, var(--primary-color), #2746a3);
-  color: white;
-  border-radius: 24px;
-  padding: 3rem;
-  text-align: center;
+.approach-heading {
+  max-width: 700px;
+
+  margin-bottom: 4rem;
 }
 
-.goal-box h2 {
-  color: white;
+.approach-heading h2 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+
+  color: var(--secondary-color);
+
   margin-bottom: 1rem;
 }
 
-.goal-box p {
-  color: #dbeafe;
-  max-width: 720px;
-  margin: auto;
+.approach-heading p {
+  max-width: 600px;
+
+  font-size: 1rem;
+
   line-height: 1.8;
 }
 
-/* RESPONSIVE */
+.approach-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1.5rem;
+}
+
+.approach-item {
+  padding: 2.5rem 2rem;
+
+  border: 1px solid var(--border-color);
+
+  border-radius: var(--border-radius);
+
+  background: var(--surface-color);
+
+  transition: var(--transition);
+}
+
+.approach-item:hover {
+  transform: translateY(-8px);
+
+  box-shadow: var(--box-shadow);
+}
+
+.approach-item.featured {
+  background: var(--primary-color);
+
+  border-color: var(--primary-color);
+
+  color: white;
+
+  transform: translateY(-15px);
+}
+
+.approach-item.featured:hover {
+  transform: translateY(-23px);
+}
+
+.approach-icon {
+  width: 48px;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(16, 185, 129, 0.12);
+
+  color: var(--accent-color);
+
+  font-size: 0.75rem;
+
+  font-weight: 800;
+
+  margin-bottom: 2rem;
+}
+
+.approach-item.featured .approach-icon {
+  background: rgba(255, 255, 255, 0.12);
+
+  color: white;
+}
+
+.approach-item h3 {
+  font-size: 1.4rem;
+
+  margin-bottom: 0.8rem;
+
+  color: var(--secondary-color);
+}
+
+.approach-item.featured h3 {
+  color: white;
+}
+
+.approach-item p {
+  line-height: 1.8;
+}
+
+.approach-item.featured p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* =========================================================
+   DEVELOPMENT TEAM
+========================================================= */
+
+.team-section {
+  background: #f1f5f9;
+
+  padding: 7rem 0;
+}
+
+.team-heading {
+  max-width: 650px;
+
+  margin-bottom: 3.5rem;
+}
+
+.team-heading h2 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+
+  color: var(--secondary-color);
+
+  margin-bottom: 1rem;
+}
+
+.team-heading p {
+  line-height: 1.8;
+}
+
+/* Team list */
+
+.team-list {
+  border-top: 1px solid #cbd5e1;
+}
+
+/* Individual member */
+
+.team-member {
+  display: grid;
+
+  grid-template-columns: 60px 55px 1fr auto;
+
+  align-items: center;
+
+  gap: 1.5rem;
+
+  padding: 1.5rem 1rem;
+
+  border-bottom: 1px solid #cbd5e1;
+
+  transition: var(--transition);
+}
+
+.team-member:hover {
+  background: white;
+
+  padding-left: 1.5rem;
+
+  box-shadow: var(--box-shadow);
+}
+
+.member-number {
+  color: #94a3b8;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+}
+
+/* Initial */
+
+.member-initial {
+  width: 50px;
+
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: var(--primary-color);
+
+  border: 2px solid var(--primary-color);
+
+  font-size: 0.8rem;
+
+  font-weight: 800;
+}
+
+.member-info h3 {
+  font-size: 1rem;
+
+  color: var(--secondary-color);
+
+  margin-bottom: 0.15rem;
+}
+
+.member-info p {
+  font-size: 0.8rem;
+
+  color: var(--muted-text-color);
+}
+
+.member-index {
+  font-family: monospace;
+
+  font-size: 0.85rem;
+
+  color: var(--primary-color);
+
+  background: #eff6ff;
+
+  padding: 0.45rem 0.7rem;
+
+  border-radius: 5px;
+}
+
+/* =========================================================
+   EDUCATIONAL GOAL
+========================================================= */
+
+.goal-section {
+  background: var(--secondary-color);
+
+  padding: 7rem 0;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* Mathematical background */
+
+.goal-section::before {
+  content: "n₁ × n₂ × n₃";
+
+  position: absolute;
+
+  right: -40px;
+
+  bottom: -70px;
+
+  font-family: var(--heading-font);
+
+  font-size: 13rem;
+
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 0.025);
+
+  white-space: nowrap;
+
+  pointer-events: none;
+}
+
+.goal-content {
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  align-items: center;
+
+  gap: 5rem;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+.goal-formula {
+  font-family: var(--heading-font);
+
+  font-size: clamp(3rem, 7vw, 6rem);
+
+  font-weight: 700;
+
+  color: var(--accent-color);
+
+  letter-spacing: -4px;
+}
+
+.goal-text h2 {
+  color: white;
+
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+
+  line-height: 1.1;
+
+  margin-bottom: 1.5rem;
+}
+
+.goal-text p {
+  max-width: 650px;
+
+  color: #cbd5e1;
+
+  line-height: 1.9;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  background: #0f172a;
+
+  color: #cbd5e1;
+
+  padding: 4.5rem 0 0;
+
+  position: relative;
+}
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+
+  gap: 3.5rem;
+
+  padding-bottom: 3.5rem;
+}
+
+.footer-logo {
+  color: white;
+
+  font-size: 1.6rem;
+
+  margin-bottom: 1rem;
+}
+
+.footer-column:first-child p {
+  max-width: 380px;
+
+  color: #94a3b8;
+
+  line-height: 1.8;
+}
+
+.footer-column h4 {
+  color: white;
+
+  font-size: 0.85rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 1.2rem;
+}
+
+.footer-column p {
+  color: #94a3b8;
+
+  font-size: 0.9rem;
+
+  line-height: 1.8;
+
+  margin-bottom: 0.5rem;
+}
+
+.footer-links li {
+  margin-bottom: 0.7rem;
+}
+
+.footer-links a {
+  color: #94a3b8;
+
+  font-size: 0.9rem;
+
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+
+  padding-left: 5px;
+}
+
+/* Bottom */
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 1.5rem 0;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  color: #64748b;
+
+  font-size: 0.78rem;
+
+  margin: 0;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .counting-hero-grid {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+
+    text-align: center;
+  }
+
+  .hero-content {
+    margin-inline: auto;
+  }
+
+  .hero-kicker {
+    justify-content: center;
+  }
+
+  .hero-content > p {
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .math-display {
+    width: 350px;
+
+    height: 350px;
+  }
+
+  .academic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .story-grid,
+  .goal-content {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+  .story-content {
+    padding-top: 0;
+  }
+
+  .goal-formula {
+    font-size: 4rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
-  .hero-grid {
+  .counting-hero {
+    min-height: auto;
+
+    padding: 5rem 0;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+
+    letter-spacing: -1.5px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .math-display {
+    width: 300px;
+
+    height: 300px;
+  }
+
+  .math-display::before {
+    width: 240px;
+
+    height: 240px;
+  }
+
+  .math-display::after {
+    width: 170px;
+
+    height: 170px;
+  }
+
+  .math-equation {
+    font-size: 1.5rem;
+
+    padding: 1rem;
+  }
+
+  .math-circle {
+    width: 55px;
+
+    height: 55px;
+  }
+
+  .circle-one {
+    left: 40px;
+
+    top: 35px;
+  }
+
+  .circle-two {
+    right: 20px;
+
+    top: 80px;
+  }
+
+  .circle-three {
+    left: 60px;
+
+    bottom: 30px;
+  }
+
+  .math-label {
+    right: 10px;
+
+    bottom: 5px;
+  }
+
+  .project-story,
+  .approach-section,
+  .team-section,
+  .academic-section,
+  .goal-section {
+    padding: 5rem 0;
+  }
+
+  .academic-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero-art {
-    order: -1;
-    height: 250px;
+  .academic-card {
+    min-height: auto;
+
+    padding: 1.7rem;
   }
 
-  .about-hero h1 {
+  .approach-grid {
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+  }
+
+  .approach-item.featured {
+    transform: none;
+  }
+
+  .approach-item.featured:hover {
+    transform: translateY(-5px);
+  }
+
+  .team-member {
+    grid-template-columns: 40px 50px 1fr;
+
+    gap: 1rem;
+  }
+
+  .member-index {
+    grid-column: 3;
+
+    justify-self: start;
+  }
+
+  .goal-formula {
+    font-size: 3rem;
+
+    letter-spacing: -2px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 2.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    text-align: center;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .hero-content h1 {
     font-size: 2.5rem;
   }
 
-  .goal-box {
-    padding: 2rem;
+  .math-display {
+    transform: scale(0.88);
+
+    margin-top: -1rem;
+
+    margin-bottom: -1rem;
+  }
+
+  .story-heading h2,
+  .approach-heading h2,
+  .team-heading h2,
+  .goal-text h2 {
+    font-size: 2rem;
+  }
+
+  .team-member {
+    grid-template-columns: 35px 45px 1fr;
+
+    gap: 0.7rem;
+
+    padding: 1.2rem 0.5rem;
+  }
+
+  .member-initial {
+    width: 42px;
+
+    height: 42px;
+
+    font-size: 0.7rem;
+  }
+
+  .member-info h3 {
+    font-size: 0.85rem;
+  }
+
+  .member-info p {
+    font-size: 0.7rem;
+  }
+
+  .member-index {
+    font-size: 0.7rem;
+
+    grid-column: 3;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .footer-column:first-child p {
+    margin-inline: auto;
+  }
+
+  .footer-links a:hover {
+    padding-left: 0;
   }
 }
